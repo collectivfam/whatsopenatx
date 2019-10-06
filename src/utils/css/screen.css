@@ -65,7 +65,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 13vw 0;
+    padding: 8vw 0;
     max-width: 108rem;
     margin: auto;
     text-align: center;
@@ -99,6 +99,7 @@ body {
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
+    max-width: 64rem;
     color: var(--color-base);
 }
 @media (max-width: 500px) {
