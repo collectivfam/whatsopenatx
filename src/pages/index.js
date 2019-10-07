@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -20,7 +20,6 @@ const BlogIndex = ({ data }, location) => {
         title="#ATXHolidayHours - Holiday Shopping Hours by Month"
         keywords={[`atx`, `holidays`, `holiday shopping`, `shopping hours`, `what's open in atx`]}
       />
-      {/* <Bio /> */}
       {data.site.siteMetadata.description && (
         <header className="page-head">
           <h2 className="page-head-title">
@@ -28,18 +27,79 @@ const BlogIndex = ({ data }, location) => {
           </h2>
         </header>
       )}
+      
       <div className="post-feed">
-        {posts.map(({ node }) => {
-          postCounter++
-          return (
-            <PostCard
-              key={node.fields.slug}
-              count={postCounter}
-              node={node}
-              postClass={`post`}
-            />
-          )
-        })}
+        <section className="page-season-section page-season-fall">
+          <div className="page-season">
+            <h1 className="page-season-title">Autumn</h1>
+            <div className="page-season-month">
+              <h1>September</h1>
+              <Link className="page-season-link" to="/september/labor-day"><h3>Labor Day</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>October</h1>
+              <Link className="page-season-link" to="/october/columbus-day"><h3>Columbus Day,</h3></Link>
+              <Link className="page-season-link" to="/october/halloween"><h3>Halloween</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>November</h1>
+              <Link className="page-season-link" to="/october/veterans-day"><h3>Veteran's Day,</h3></Link>
+              <Link className="page-season-link" to="/october/thanksgiving"><h3>Thanksgiving</h3></Link>
+            </div>
+          </div>
+        </section>
+        <section className="page-season-section page-season-winter">
+          <div className="page-season">
+            <h1 className="page-season-title">Winter</h1>
+            <div className="page-season-month">
+              <h1>December</h1>
+              <Link className="page-season-link" to="/october/christmas-holidays"><h3>Christmas Holidays</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>January</h1>
+              <Link className="page-season-link" to="/october/new-years-day"><h3>New Year's Day,</h3></Link>
+              <Link className="page-season-link" to="/october/mlk-day"><h3>Martin Luther King Day</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>February</h1>
+              <Link className="page-season-link" to="/october/presidents-day"><h3>President's Day</h3></Link>
+            </div>
+          </div>
+        </section>
+        <section className="page-season-section page-season-spring">
+          <div className="page-season">
+            <h1 className="page-season-title">Spring</h1>
+            <div className="page-season-month">
+              <h1>March</h1>
+              <Link className="page-season-link" to="/october/texas-independence-day"><h3>Texas Independence Day</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>April</h1>
+              <Link className="page-season-link" to="/october/easter"><h3>Easter Sunday</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>May</h1>
+              <Link className="page-season-link" to="/october/memorial"><h3>Memorial Day</h3></Link>
+            </div>
+          </div>
+        </section>
+        <section className="page-season-section page-season-summer">
+          <div className="page-season">
+            <h1 className="page-season-title">Summer</h1>
+            <div className="page-season-month">
+              <h1>June</h1>
+              <h3 className="no-closures">(No holiday closures)</h3>
+            </div>
+            <div className="page-season-month">
+              <h1>July</h1>
+              <Link className="page-season-link" to="/october/independence-day"><h3>Independence Day</h3></Link>
+            </div>
+            <div className="page-season-month">
+              <h1>August</h1>
+              <h3 className="no-closures">(No holiday closures)</h3>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   )

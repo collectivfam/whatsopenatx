@@ -29,6 +29,7 @@ body {
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
+    color: #323232;
 }
 
 .img {
@@ -51,24 +52,22 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-    padding: 3vw;
+    padding: 3vw 0;
     min-height: 100vh;
 }
 @media (max-width: 850px) {
     .site-wrapper {
-        padding: 6vw;
+        padding: 6vw 0;
     }
 }
 
 .page-head {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 8vw 0;
+    align-items: flex-start;
+    padding: 8rem 2rem;
     max-width: 108rem;
     margin: auto;
-    text-align: center;
 }
 
 .error-head {
@@ -101,6 +100,7 @@ body {
     font-size: 4.2rem;
     max-width: 64rem;
     color: var(--color-base);
+    text-align: left;
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -387,15 +387,69 @@ body {
 
 }
 
+/* Page Sections
+/* ---------------------------------------------------------- */
+.page-season-section {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+}
+
+.page-season {
+    padding: 0 6rem;
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.page-season-title {
+    font-size: 2rem;
+    border-bottom: 1px solid gray;
+}
+
+.page-season-month h1 {
+    margin-bottom: 0;
+}
+
+.page-season-month .no-closures {
+    margin: 1rem 0 4rem 0;
+    display: inline-block;
+    color: #858585;
+}
+
+.page-season-fall {
+    background: url(../../assets/images/fall.png) left center no-repeat;
+    background-size: contain;
+}
+
+.page-season-winter {
+    background: url(../../assets/images/winter.png) right center no-repeat;
+    background-size: contain;
+    text-align: right;
+}
+
+.page-season-spring {
+    background: url(../../assets/images/spring.png) left center no-repeat;
+    background-size: contain;
+}
+
+.page-season-summer {
+    background: url(../../assets/images/summer.png) right center no-repeat;
+    background-size: contain;
+    text-align: right;
+}
+
+.page-season-link {
+    display: inline-block;
+}
+
+.page-season-link h3 {
+    margin: 1rem 2rem 4rem 0;
+}
 
 /* Post Feed
 /* ---------------------------------------------------------- */
 
 .post-feed {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 108rem;
-    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .post-card {
@@ -515,13 +569,13 @@ body {
 .post-content-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .post-content-title {
     margin: 0 0 3vw;
     color: var(--color-base);
-    text-align: center;
+    text-align: left;
 }
 
 .post-content-excerpt {
@@ -529,7 +583,7 @@ body {
     font-size: 2.2rem;
     line-height: 1.6em;
     color: var(--color-base);
-    text-align: center;
+    text-align: left;
     opacity: 0.5;
 }
 @media (max-width: 500px) {

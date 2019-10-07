@@ -336,7 +336,7 @@ blockquote cite a {
 }
 
 a {
-    color: color(var(--color-primary) l(-5%));
+    color: #2662ed;
     text-decoration: none;
     transition: 0.4s ease;
 }
